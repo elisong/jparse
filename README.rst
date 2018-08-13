@@ -49,10 +49,6 @@ Simple Case
 Dependencies
 ------------
 
-`Document here`_
-
-.. _Document here: http://jparse.readthedocs.io/en/latest/
-
 - **pandas**
 
 Installation
@@ -71,7 +67,10 @@ or
 Document
 --------
 
-http://jparse.readthedocs.io/en/latest/
+`Document here`_
+
+.. _Document here: http://jparse.readthedocs.io/en/latest/
+
 
 
 ::
