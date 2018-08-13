@@ -2,7 +2,7 @@
 jparse - A JSON-like Object Parsing Tool for Python
 ===================================================
 
-.. image:: jparse.png
+.. image:: https://github.com/elisong/jparse/blob/master/jparse.png
         :target: https://github.com/elisong/jparse
 
 -----
@@ -11,7 +11,7 @@ jparse - A JSON-like Object Parsing Tool for Python
         :alt: Build Status
         :target: https://travis-ci.org/elisong/jparse
 
-.. image:: https://img.shields.io/badge/pypi-v0.1.1-blue.svg
+.. image:: https://img.shields.io/badge/pypi-v0.1.3-blue.svg
         :alt: PyPI
         :target: https://github.com/elisong/jparse
 
@@ -49,7 +49,9 @@ Simple Case
 Dependencies
 ------------
 
-- **pandas**
+- `Pandas`_
+
+.. _Pandas: https://pandas.pydata.org/
 
 Installation
 ------------
@@ -71,17 +73,11 @@ Document
 
 .. _Document here: http://jparse.readthedocs.io/en/latest/
 
-
-
-::
-
-
-
 Changelog
 ---------
 
-v0.1.0 - 2018-08-13
-==================
+v0.1.3 - 2018-08-13
+^^^^^^^^^^^^^^^^^^^
 
 - **Added**
     - Create project.
