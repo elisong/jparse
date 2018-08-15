@@ -76,8 +76,12 @@ Document
 Changelog
 ---------
 
+v0.1.4 - 2018-08-15
+^^^^^^^^^^^^^^^^^^^
+
+- **Changed** license.
+
 v0.1.3 - 2018-08-13
 ^^^^^^^^^^^^^^^^^^^
 
-- **Added**
-    - Create project.
+- **Added** project.

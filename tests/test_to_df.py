@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Author: Eli Song
-# @Date:   2018-08-13 00:18:28
-# @Last Modified by:   Eli Song
-# @Last Modified time: 2018-08-13 00:20:28
-
 from collections import OrderedDict
 import pandas as pd
 from pandas.testing import assert_frame_equal

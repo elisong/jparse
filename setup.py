@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Author: Eli Song
-# @Date:   2018-07-14 17:30:47
-# @Last Modified by:   Eli Song
-# @Last Modified time: 2018-08-13 21:44:36
-
 from setuptools import setup
 import os
 here = os.path.abspath(os.path.dirname(__file__))
@@ -34,7 +29,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6'
     ],
-    license='Apache License 2.0',
+    license='Apache 2.0',
     platforms='Posix; MacOS X; Windows',
     packages=['jparse'],
     python_requires='>=2.7',

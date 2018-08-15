@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Author: Eli Song
-# @Date:   2018-08-13 00:15:56
-# @Last Modified by:   Eli Song
-# @Last Modified time: 2018-08-13 00:18:10
-
 from collections import OrderedDict
 from jparse import JParser
 

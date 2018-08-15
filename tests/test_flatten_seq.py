@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Author: Eli Song
-# @Date:   2018-08-12 23:57:11
-# @Last Modified by:   Eli Song
-# @Last Modified time: 2018-08-13 00:01:55
-
 import pytest
 from collections import defaultdict, OrderedDict
 from jparse import JParser
