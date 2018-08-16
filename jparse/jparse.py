@@ -161,9 +161,17 @@ class JParser(object):
                             yield dropped
                         elif not gross and selected:
                             yield selected
+                        else:
+                            for s in self.select(v, sel_keys, has_subkeys,
+                                                 drop_subkeys):
+                                yield s
                     elif isinstance(v, MutableMapping):
                         if filtered:
                             yield dropped
+                        else:
+                            for s in self.select(v, sel_keys, has_subkeys,
+                                                 drop_subkeys):
+                                yield s
                     else:
                         if not any([has_subkeys, drop_subkeys]):
                             yield v
