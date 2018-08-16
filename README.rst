@@ -11,7 +11,7 @@ jparse - A JSON-like Object Parsing Tool for Python
         :alt: Build Status
         :target: https://travis-ci.org/elisong/jparse
 
-.. image:: https://img.shields.io/badge/pypi-v0.1.3-blue.svg
+.. image:: https://img.shields.io/badge/pypi-v0.1.4-blue.svg
         :alt: PyPI
         :target: https://github.com/elisong/jparse
 
