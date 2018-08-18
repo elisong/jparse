@@ -11,7 +11,7 @@ jparse - A JSON-like Object Parsing Tool for Python
         :alt: Build Status
         :target: https://travis-ci.org/elisong/jparse
 
-.. image:: https://img.shields.io/badge/pypi-v0.1.5-blue.svg
+.. image:: https://img.shields.io/badge/pypi-v0.1.6-blue.svg
         :alt: PyPI
         :target: https://github.com/elisong/jparse
 
@@ -75,6 +75,12 @@ Document
 
 Changelog
 ---------
+
+v0.1.6 - 2018-08-18
+^^^^^^^^^^^^^^^^^^^^
+
+- **Change** ``pd.DataFrame()`` to ``pd.DataFrame.from_records()`` for ``JParser.to_df()``
+- **Change** assert_frame_equal import for tests/test_to_df.py
 
 v0.1.5 - 2018-08-18
 ^^^^^^^^^^^^^^^^^^^
