@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import pytest
-from collections import defaultdict, OrderedDict
+from collections import OrderedDict
 from jparse import JParser
 
 jp = JParser()
@@ -15,19 +15,19 @@ TEST_CASE2 = OrderedDict([('A1', [OrderedDict([('B1', 4), ('B2', 5)]),
 
 def test_flatten_seq_default():
     result1 = jp.flatten_seq(TEST_CASE1)
-    expected1 = defaultdict(None, {'0': {'A1': 1, 'A2': 2, 'A3': 3},
-                                   '1': {'A1': [4, 5, 6],
-                                         'A2': 7,
-                                         'A3': 'x'}})
+    expected1 = {'0': {'A1': 1, 'A2': 2, 'A3': 3},
+                 '1': {'A1': [4, 5, 6],
+                       'A2': 7,
+                       'A3': 'x'}}
     assert result1 == expected1
 
 
 def test_flatten_seq_with_prefix():
     result1 = jp.flatten_seq(TEST_CASE1, prefix='F')
-    expected1 = defaultdict(None, {'F_0': {'A1': 1, 'A2': 2, 'A3': 3},
-                                   'F_1': {'A1': [4, 5, 6],
-                                           'A2': 7,
-                                           'A3': 'x'}})
+    expected1 = {'F_0': {'A1': 1, 'A2': 2, 'A3': 3},
+                 'F_1': {'A1': [4, 5, 6],
+                         'A2': 7,
+                         'A3': 'x'}}
     assert result1 == expected1
 
 
