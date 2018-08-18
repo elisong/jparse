@@ -295,7 +295,7 @@ class JParser(object):
             elif isinstance(item, MutableSequence):
                 flated = self.flatten_seq(item)
                 records = [self.flatten_map(v) for v in flated.values()]
-        result = pd.DataFrame(self.sort(records))
+        result = pd.DataFrame.from_records(records)
         return result
 
 
