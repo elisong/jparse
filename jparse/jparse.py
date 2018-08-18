@@ -296,7 +296,7 @@ class JParser(object):
                 flated = self.flatten_seq(item)
                 records = [self.flatten_map(v) for v in flated.values()]
         result = pd.DataFrame(self.sort(records))
-        return result.reset_index(drop=True)
+        return result
 
 
 if __name__ == '__main__':
