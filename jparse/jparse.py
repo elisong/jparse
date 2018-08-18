@@ -14,7 +14,7 @@
 # or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-from collections import defaultdict, OrderedDict
+from collections import OrderedDict
 from collections import MutableMapping, MutableSequence
 import pandas as pd
 import copy
@@ -36,7 +36,7 @@ class JParser(object):
 
         :rtype: defaultdict
         """
-        result = defaultdict()
+        result = {}
         prefix_sep = prefix + '_' if prefix else ''
         if isinstance(item, MutableMapping):
             result.update({prefix_sep + k2: v2 for k, v in item.items()
@@ -63,7 +63,7 @@ class JParser(object):
         if not isinstance(item, MutableMapping):
             raise ValueError('Must be MutableMapping item!')
         else:
-            result = defaultdict()
+            result = {}
             for k, v in item.items():
                 new_key = prefix + '_' + k if prefix else k
                 if isinstance(v, MutableMapping):
@@ -87,7 +87,7 @@ class JParser(object):
         if not isinstance(item, MutableSequence):
             raise ValueError('Must be MutableSequence item!')
         else:
-            result = defaultdict()
+            result = {}
             for i, v in enumerate(item):
                 new_key = prefix + '_' + str(i) if prefix else str(i)
                 if isinstance(v, MutableSequence):
