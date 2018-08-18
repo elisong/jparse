@@ -51,52 +51,52 @@ flatten - flatten thoroughly
 .. code-block:: python
 
     >>> print(jp.flatten(TEST_CASE1))
-    defaultdict(None, {'0_A1': 1,
-                       '0_A2': 2,
-                       '0_A3': 3,
-                       '1_A1_0': 4,
-                       '1_A1_1': 5,
-                       '1_A1_2': 6,
-                       '1_A2': 7,
-                       '1_A3': 'x'})
+    {'0_A1': 1,
+     '0_A2': 2,
+     '0_A3': 3,
+     '1_A1_0': 4,
+     '1_A1_1': 5,
+     '1_A1_2': 6,
+     '1_A2': 7,
+     '1_A3': 'x'}
 
     >>> print(jp.flatten(TEST_CASE2))
-    defaultdict(None, {'A1_0_B1': 4,
-                       'A1_0_B2': 5,
-                       'A1_1_B1': 6,
-                       'A1_1_B3': 7,
-                       'A2_C1_0': 8,
-                       'A2_C1_1': 9,
-                       'A2_C2_0': 10,
-                       'A2_C2_1': 11,
-                       'A3_A1_B4': 12,
-                       'A3_A4': 10})
+    {'A1_0_B1': 4,
+     'A1_0_B2': 5,
+     'A1_1_B1': 6,
+     'A1_1_B3': 7,
+     'A2_C1_0': 8,
+     'A2_C1_1': 9,
+     'A2_C2_0': 10,
+     'A2_C2_1': 11,
+     'A3_A1_B4': 12,
+     'A3_A4': 10}
 
 - add prefix
 
 .. code-block:: python
 
     >>> print(jp.flatten(TEST_CASE1, prefix='F'))
-    defaultdict(None, {'F_0_A1': 1,
-                       'F_0_A2': 2,
-                       'F_0_A3': 3,
-                       'F_1_A1_0': 4,
-                       'F_1_A1_1': 5,
-                       'F_1_A1_2': 6,
-                       'F_1_A2': 7,
-                       'F_1_A3': 'x'})
+    {'F_0_A1': 1,
+     'F_0_A2': 2,
+     'F_0_A3': 3,
+     'F_1_A1_0': 4,
+     'F_1_A1_1': 5,
+     'F_1_A1_2': 6,
+     'F_1_A2': 7,
+     'F_1_A3': 'x'}
 
     >>> print(jp.flatten(TEST_CASE2, prefix='F'))
-    defaultdict(None, {'F_A1_0_B1': 4,
-                       'F_A1_0_B2': 5,
-                       'F_A1_1_B1': 6,
-                       'F_A1_1_B3': 7,
-                       'F_A2_C1_0': 8,
-                       'F_A2_C1_1': 9,
-                       'F_A2_C2_0': 10,
-                       'F_A2_C2_1': 11,
-                       'F_A3_A4': 10,
-                       'F_A3_A1_B4': 12})
+    {'F_A1_0_B1': 4,
+     'F_A1_0_B2': 5,
+     'F_A1_1_B1': 6,
+     'F_A1_1_B3': 7,
+     'F_A2_C1_0': 8,
+     'F_A2_C1_1': 9,
+     'F_A2_C2_0': 10,
+     'F_A2_C2_1': 11,
+     'F_A3_A4': 10,
+     'F_A3_A1_B4': 12}
 
 ------
 
@@ -108,12 +108,12 @@ flatten_seq - flatten until encounter MutableMapping object
 .. code-block:: python
 
     >>> print(jp.flatten_seq(TEST_CASE1))
-    defaultdict(None, {'0': {'A1': 1,
-                             'A2': 2,
-                             'A3': 3},
-                       '1': {'A1': [4, 5, 6],
-                             'A2': 7,
-                             'A3': 'x'}})
+    {'0': {'A1': 1,
+           'A2': 2,
+           'A3': 3},
+     '1': {'A1': [4, 5, 6],
+           'A2': 7,
+           'A3': 'x'}}
 
     >>> import pytest
     >>> with pytest.raises(ValueError):
@@ -124,12 +124,12 @@ flatten_seq - flatten until encounter MutableMapping object
 .. code-block:: python
 
     >>> print(jp.flatten_seq(TEST_CASE1, prefix='F'))
-    defaultdict(None, {'F_0': {'A1': 1,
-                               'A2': 2,
-                               'A3': 3},
-                       'F_1': {'A1': [4, 5, 6],
-                               'A2': 7,
-                               'A3': 'x'}})
+    {'F_0': {'A1': 1,
+             'A2': 2,
+             'A3': 3},
+     'F_1': {'A1': [4, 5, 6],
+             'A2': 7,
+             'A3': 'x'}}
 
 ------
 
@@ -141,12 +141,12 @@ flatten_map - flatten until encounter MutableSequence object
 .. code-block:: python
 
     >>> print(jp.flatten_map(TEST_CASE2))
-    defaultdict(None, {'A1': [{'B1': 4, 'B2': 5},
-                              {'B1': 6, 'B3': 7}],
-                       'A2_C1': [8, 9],
-                       'A2_C2': [10, 11],
-                       'A3_A4': 10,
-                       'A3_A1_B4': 12})
+    {'A1': [{'B1': 4, 'B2': 5},
+            {'B1': 6, 'B3': 7}],
+     'A2_C1': [8, 9],
+     'A2_C2': [10, 11],
+     'A3_A4': 10,
+     'A3_A1_B4': 12}
 
     >>> import pytest
     >>> with pytest.raises(ValueError):
@@ -157,12 +157,12 @@ flatten_map - flatten until encounter MutableSequence object
 .. code-block:: python
 
     >>> print(jp.flatten_map(TEST_CASE2, prefix='F'))
-    defaultdict(None, {'F_A1': [{'B1': 4, 'B2': 5},
-                                {'B1': 6, 'B3': 7}],
-                       'F_A2_C1': [8, 9],
-                       'F_A2_C2': [10, 11],
-                       'F_A3_A4': 10,
-                       'F_A3_A1_B4': 12})
+    {'F_A1': [{'B1': 4, 'B2': 5},
+              {'B1': 6, 'B3': 7}],
+     'F_A2_C1': [8, 9],
+     'F_A2_C2': [10, 11],
+     'F_A3_A4': 10,
+     'F_A3_A1_B4': 12}
 
 ------
 
